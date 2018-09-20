@@ -1,10 +1,10 @@
 # This goes in /etc/fstab for mounting samba shares on boot
 # You need to install cifs-utils (at least on debian based os's) for this to work
-# Depending on the OS, sometimes it's necessary to use the second verison, which includes security
+# Depending on the OS, sometimes it's necessary to use the second verison, which includes a security flag
 
 # Version One
-//server/remote/path /local/path cifs username=[replace],password=[replace],uid=[userid],gid=[groupid],iocharset=utf8 0 0
+//server/remote/path /local/path cifs username=[replace],password=[replace],uid=nobody,iocharset=utf8,noperm 0 0
 
 # Version Two
-//server/remote/path /local/path cifs username=[replace],password=[replace],uid=[userid],gid=[groupid],iocharset=utf8,sec=ntlm 0 0
+//server/remote/path /local/path cifs username=[replace],password=[replace],uid=nobody,iocharset=utf8,sec=ntlm,noperm 0 0
 

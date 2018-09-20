@@ -166,3 +166,9 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Start by applying background settings
+exec --no-startup-id /home/caperren/scripts/apply_monitor_config.sh
+exec --no-startup-id /home/caperren/scripts/setup_workspaces.sh
+
+
